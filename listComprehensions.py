@@ -32,4 +32,10 @@ print(metadata_dict.keys())
 print()
 print(metadata_dict['kappa.txt'])
 
-# Dictionary Comprehensions
+# Dictionary Comprehensions with conditions
+
+humansize_dict = {os.path.splitext(f)[0]:humansize.approximate_size(meta.st_size) for f, meta in metadata_dict.items() if meta.st_size < 6000}
+print()
+print(humansize_dict)
+
+# Swapping keys with items in dict
