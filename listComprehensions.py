@@ -45,3 +45,11 @@ print()
 print(a_dict.items())
 b_dict = {value:key for key, value in a_dict.items()}
 print(b_dict)
+
+# Set comprehation
+a_set = set(range(10))
+print(a_set)
+b_set = {num **2 for num in a_set}
+print(b_set)
+c_set = {num for num in a_set if num%2==0}
+print(c_set)
