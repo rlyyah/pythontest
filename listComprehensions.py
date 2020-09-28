@@ -39,3 +39,9 @@ print()
 print(humansize_dict)
 
 # Swapping keys with items in dict
+a_dict = {'a':1,'b':2, 'c':3,'d':4}
+print(a_dict)
+print()
+print(a_dict.items())
+# b_dict = {value:key for key, value in a_dict.items()}
+# print(b_dict)
