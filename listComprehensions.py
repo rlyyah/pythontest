@@ -21,3 +21,15 @@ print(file_sizes_and_paths)
 # Using external function in the list
 just_another_list = [(humansize.approximate_size(os.stat(f).st_size), os.path.realpath(f)) for f in glob.glob('*.txt')]
 print(just_another_list)
+
+# Dictionary Comprehensions
+metadata = [(f, os.stat(f)) for f in glob.glob('*.txt')]
+print()
+print(metadata)
+metadata_dict =  {f: os.stat(f) for f in glob.glob('*.txt')}
+print(metadata_dict)
+print(metadata_dict.keys())
+print()
+print(metadata_dict['kappa.txt'])
+
+# Dictionary Comprehensions
