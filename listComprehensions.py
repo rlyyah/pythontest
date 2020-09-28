@@ -13,3 +13,7 @@ print(txt_file_path_list)
 # You can even add a condition into the list
 txt_files_list_under_6000 = [f for f in glob.glob('*.txt') if os.stat(f).st_size < 6000]
 print(txt_file_path_list)
+
+# Creating tuples of file size and path and packing it into a list
+file_sizes_and_paths = [(os.stat(f).st_size, os.path.realpath(f)) for f in glob.glob('*.txt')]
+print(file_sizes_and_paths)
