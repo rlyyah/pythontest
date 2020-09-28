@@ -1,4 +1,4 @@
-import os, glob
+import os, glob, humansize
 
 # Great way to operate on lists
 a_list = [1,9,18,4]
@@ -17,3 +17,7 @@ print(txt_file_path_list)
 # Creating tuples of file size and path and packing it into a list
 file_sizes_and_paths = [(os.stat(f).st_size, os.path.realpath(f)) for f in glob.glob('*.txt')]
 print(file_sizes_and_paths)
+
+# Using external function in the list
+just_another_list = [(humansize.approximate_size(os.stat(f).st_size), os.path.realpath(f)) for f in glob.glob('*.txt')]
+print(just_another_list)
